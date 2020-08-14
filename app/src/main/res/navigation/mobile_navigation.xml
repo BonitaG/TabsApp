@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    android:label="Новая Задача"
-    app:startDestination="@id/formFragment1">
+    app:startDestination="@id/navigation_home">
 
     <fragment
         android:id="@+id/navigation_home"
@@ -13,7 +12,7 @@
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_navigation_home_to_formFragment2"
-            app:destination="@id/formFragment1" />
+            app:destination="@id/navigation_home" />
     </fragment>
 
     <fragment
@@ -27,9 +26,19 @@
         android:name="com.bonita.tabsapp.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+
     <fragment
-        android:id="@+id/formFragment1"
         android:name="com.bonita.tabsapp.ui.FormFragment"
-        android:label="Новая Задача"
-        tools:layout="@layout/fragment_form" />
+        android:id="@+id/navigation_form"
+        android:label="Task"
+        tools:layout="@layout/fragment_form"/>
+
+    <fragment
+        android:name=""
+        android:label="Profile"
+        android:id="@+id/navigation_profile"
+        tools:layout="@layout/fragment_profile"/>
+
+
+
 </navigation>
